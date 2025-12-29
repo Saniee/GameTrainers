@@ -1,11 +1,11 @@
-# Current Features for: ULTRAKILL
+## Current Features for: ULTRAKILL
 
-## Player
+### Player
 * No Damage
 * Infinite Dash/Stamina
 * Don't Deplete the Railgun charge & Rocket Launcher freeze time charge.
 * Infinite Jumps
-### Reading of player values like:
+#### Reading of player values like:
 * walk speed
 * jump power
 * air accel
@@ -14,8 +14,8 @@
 * raw health value, go nuts
 * boostCharges, kinda iffy, it's there if the Infinite Stamina script doesn't work.
 
-## Weapons
-## ! Always disable/unfreeze the values before finishing a level, it's prone to crashing, as the values are dynamic and they're addresses change on each lvl. !
+### Weapons
+! Always disable/unfreeze the values before finishing a level, it's prone to crashing, as the values are dynamic and they're addresses change on each lvl. !
 * Revolver Coin Charges
 * Red Revolver Charges
 * Nailgun Ammo & Magnets
