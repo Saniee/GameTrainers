@@ -12,7 +12,9 @@ From there, u can freely play around.
 
 ### Example
 ![how too](tutorial.png)
+
 Whoa, it's alive!
+
 ![there we are](tutorial2.png)
 
 ### List of games I made tables for.
