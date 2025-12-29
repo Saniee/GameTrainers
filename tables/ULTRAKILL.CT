@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>2</ID>
-      <Description>"Start"</Description>
+      <Description>"Activate Me!"</Description>
       <Options moHideChildren="1"/>
       <Color>00FF00</Color>
       <VariableType>Auto Assembler Script</VariableType>
@@ -198,7 +198,7 @@ db F3 41 0F 11 AF A4 00 00 00
           <Color>FFFF00</Color>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
-            <CheatEntry NoCheckbox="1">
+            <CheatEntry>
               <ID>4</ID>
               <Description>"walkSpeed"</Description>
               <DropDownList DisplayValueAsItem="1">750:Default
@@ -211,7 +211,7 @@ db F3 41 0F 11 AF A4 00 00 00
                 <Offset>244</Offset>
               </Offsets>
             </CheatEntry>
-            <CheatEntry NoCheckbox="1">
+            <CheatEntry>
               <ID>5</ID>
               <Description>"jumpPower"</Description>
               <DropDownList DisplayValueAsItem="1">90:Default
@@ -224,7 +224,7 @@ db F3 41 0F 11 AF A4 00 00 00
                 <Offset>248</Offset>
               </Offsets>
             </CheatEntry>
-            <CheatEntry NoCheckbox="1">
+            <CheatEntry>
               <ID>6</ID>
               <Description>"airAcceleration"</Description>
               <DropDownList DisplayValueAsItem="1">6000:Default
@@ -237,7 +237,7 @@ db F3 41 0F 11 AF A4 00 00 00
                 <Offset>24C</Offset>
               </Offsets>
             </CheatEntry>
-            <CheatEntry NoCheckbox="1">
+            <CheatEntry>
               <ID>7</ID>
               <Description>"wallJumpPower"</Description>
               <DropDownList DisplayValueAsItem="1">150:Default
@@ -445,69 +445,6 @@ db F3 0F 11 6E 58
               </Offsets>
             </CheatEntry>
           </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>36</ID>
-          <Description>"StylePoints"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <Color>8080FF</Color>
-          <VariableType>4 Bytes</VariableType>
-          <Address>Player</Address>
-          <Offsets>
-            <Offset>C4</Offset>
-            <Offset>40</Offset>
-            <Offset>110</Offset>
-          </Offsets>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>37</ID>
-      <Description>"Multiply Earned Style Points"</Description>
-      <VariableType>Auto Assembler Script</VariableType>
-      <AssemblerScript>[ENABLE]
-alloc(newmem,2048,StyleHUD:AddPoints+1ff) 
-label(returnhere)
-label(originalcode)
-label(exit)
-label(stylemul)
-registerSymbol(stylemul)
-
-newmem:
-imul ecx,[stylemul]
-
-originalcode:
-mov [rax+000000C4],ecx
-
-stylemul:
-dd (int)1
-
-exit:
-jmp returnhere
-
-StyleHUD:AddPoints+1ff:
-jmp newmem
-nop
-returnhere:
-
-[DISABLE]
-dealloc(newmem)
-unregisterSymbol(stylemul)
-StyleHUD:AddPoints+1ff:
-db 89 88 C4 00 00 00
-//mov [rax+000000C4],ecx
-</AssemblerScript>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>38</ID>
-          <Description>"Style Multiplier"</Description>
-          <DropDownList ReadOnly="1" DisplayValueAsItem="1">1:Default
-2:2x
-4:4x
-</DropDownList>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>stylemul</Address>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
