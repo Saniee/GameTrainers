@@ -1,4 +1,4 @@
 # Cheat Engine Tables for games, free to use.
 
-## List of games the tables still work.
+## List of games I made tables for.
 * ULTRAKILL - [Features](/features/Ultrakill.md) / [Download](/tables/ULTRAKILL.CT) (Click the download icon.)
